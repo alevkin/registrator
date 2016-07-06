@@ -1,5 +1,5 @@
 FROM gliderlabs/alpine:3.2
-ENTRYPOINT ["/bin/registrator"]
+ENTRYPOINT ["/bin/registrator -internal=true"]
 
 COPY . /go/src/github.com/gliderlabs/registrator
 RUN apk-install -t build-deps go git mercurial \
